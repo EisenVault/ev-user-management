@@ -1,4 +1,4 @@
-# ev-userManagement
+# ev-user-management
 
 This add-on is a great thing that allows you to reset passwords for users who forgot owns password without contacting Administrator.
 
@@ -27,7 +27,7 @@ This add-on is a great thing that allows you to reset passwords for users who fo
 
     1. Clone project
 
-	$ git clone https://github.com/monicakumari/ev-OpenSource-AddOn.git
+	$ git clone https://github.com/EisenVault/ev-user-management.git
 
     2. Compile repo amp
 
