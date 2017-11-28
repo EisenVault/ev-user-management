@@ -1,0 +1,5 @@
+/target
+/alf_data*
+/*.log*
+/*log*
+/*.log

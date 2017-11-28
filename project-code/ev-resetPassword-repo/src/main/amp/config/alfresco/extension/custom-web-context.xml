@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+<beans>
+   <bean id="webscript.org.alfresco.repository.person.user-csv-upload.post"
+		class="com.eisenvault.repo.overridden.webscript.CustomUserCSVUploadPost" parent="webscript">
+		<property name="authenticationService" ref="AuthenticationService" />
+		<property name="authorityService" ref="AuthorityService" />
+		<property name="personService" ref="PersonService" />
+		<property name="tenantService" ref="tenantService" />
+		<property name="dictionaryService" ref="DictionaryService" />
+		<property name="transactionHelper" ref="web.retryingTransactionHelper" />
+		<property name="numberOfUsersLimitCheck" ref="eisenvault-numberOfUsersLimitCheck" />
+	</bean>
+	
+    <bean id="webscript.org.alfresco.repository.person.changepassword.post"
+		class="com.eisenvault.repo.overridden.webscript.CustomChangePasswordPost" parent="webscript">
+		<property name="authenticationService" ref="AuthenticationService" />
+		<property name="authorityService" ref="AuthorityService" />
+		<property name="serviceRegistry" ref="ServiceRegistry" />
+	</bean>
+</beans>

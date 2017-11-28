@@ -1,0 +1,7 @@
+<webscript>
+    <shortname>count Users</shortname>
+    <description>count the number of users available</description>
+    <url>/com/eisenvault/usersCount</url>
+    <authentication>user</authentication>
+    <format default="json"></format>
+</webscript>

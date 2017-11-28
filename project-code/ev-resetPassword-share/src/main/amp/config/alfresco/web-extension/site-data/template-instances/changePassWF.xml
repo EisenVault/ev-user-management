@@ -1,0 +1,13 @@
+<template-instance>
+    <template-type>com/eisenvault/changePassWF/changePassWF</template-type>
+
+    <components>
+        <component>
+            <scope>template</scope>
+            <region-id>changePassForm</region-id>
+            <source-id>changePassForm</source-id>
+            <url>/com/eisenvault/resetPassword/changePassWF</url>
+        </component>
+    </components>
+
+</template-instance>

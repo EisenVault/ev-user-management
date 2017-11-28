@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+
+<beans>
+
+     <bean class="com.eisenvault.resetpassword.util.EmailHelper" parent="baseJavaScriptExtension">
+        <property name="extensionName" value="emailHelper"/>
+        <property name="serviceRegistry" ref="ServiceRegistry"/>
+        <property name="repositoryHelper" ref="repositoryHelper"/>
+    </bean>
+
+    <bean class="com.eisenvault.resetpassword.services.script.ScriptPasswordService" parent="baseJavaScriptExtension">
+        <property name="extensionName" value="passwordService"/>
+        <property name="authenticationService" ref="AuthenticationService" />
+    </bean>
+
+    <bean id="genToken" parent="baseJavaScriptExtension" class="com.eisenvault.resetpassword.util.TokenGenerator">
+        <property name="extensionName">
+            <value>token</value>
+        </property>
+    </bean>
+
+    <bean class="com.eisenvault.resetpassword.util.WorkflowHelper">
+        <property name="workflowService" ref="WorkflowService"/>
+        <property name="searchService" ref="SearchService"/>
+        <property name="repository" ref="repositoryHelper"/>
+        <property name="nodeService" ref="NodeService"/>
+    </bean>
+
+    <bean class="com.eisenvault.resetpassword.util.Sudo" parent="baseJavaScriptExtension">
+        <property name="extensionName" value="sudo"/>
+    </bean>
+    
+   <bean id="newUserEmail"
+		class="com.eisenvault.repo.behaviour.GenerateNewUserWelcomeEmail">
+		<property name="policyComponent" ref="policyComponent" />
+		<property name="nodeService" ref="NodeService" />
+		<property name="personService" ref="PersonService" />
+		<property name="authenticationService" ref="AuthenticationService" />
+	</bean>
+	
+    <bean id="eisenvault-numberOfUsersLimitCheck" class="com.eisenvault.repo.util.NumberOfUsersLimitCheck">
+		<property name="maxNumberOfUsers" value="${max.number.of.users}"/>
+        <property name="personService" ref="PersonService" />
+        <property name="tenantService" ref="tenantService" />
+    </bean>
+    
+    <bean id="com.eisenvault.repo.util" class="com.eisenvault.repo.script.UserLimitCheck"
+		parent="baseJavaScriptExtension">
+		<property name="extensionName" value="usersCreationLimitCheck" />
+		<property name="numberOfUsersLimitCheck" ref="eisenvault-numberOfUsersLimitCheck" />
+	</bean>
+	
+</beans>

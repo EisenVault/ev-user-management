@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+
+<beans>
+	<bean id="webscript.com.eisenvault.user-count.usersCount.get" class="com.eisenvault.repo.webscript.CountNumberOfUsers" parent="webscript">
+		<property name="numberOfUsersLimitCheck" ref="eisenvault-numberOfUsersLimitCheck" />	
+	</bean>
+	
+	 <bean id="webscript.com.eisenvault.reset-password.reset-password.post" parent="webscript" class="com.eisenvault.resetpassword.webscripts.ResetPasswordPost">
+        <property name="workflowService" ref="WorkflowService"/>
+        <property name="personService" ref="PersonService"/>
+    </bean>
+
+    <bean id="webscript.com.eisenvault.taskIsComplete.taskIsComplete.post" parent="webscript" class="com.eisenvault.resetpassword.webscripts.TaskIsCompletePost">
+        <property name="workflowService" ref="WorkflowService"/>
+    </bean>
+
+    <bean id="webscript.com.eisenvault.applyChangedPassword.applyChangedPassword.post" parent="webscript" class="com.eisenvault.resetpassword.webscripts.ApplyChangedPasswordPost">
+        <property name="workflowService" ref="WorkflowService"/>
+    </bean>
+</beans>
