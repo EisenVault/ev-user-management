@@ -1,6 +1,6 @@
 # ev-user-management
 
-This add-on is a great thing that allows you to reset passwords for users who forgot owns password without contacting Administrator.
+EisenVault (www.eisenvault.com) has released his add-on that allows you to reset passwords for users who forgot owns password without contacting Administrator.
 
   Features :-
 	
@@ -63,4 +63,6 @@ This add-on is a great thing that allows you to reset passwords for users who fo
     6. Start Alfresco.
 
 
-reference : https://github.com/FlexSolution/AlfrescoResetPassword
+Built upon code from : https://github.com/FlexSolution/AlfrescoResetPassword
+Authors: Monica Kumari & Hiten Rastogi (www.eisenvault.com)
+Contact us: engineering@eisenvault.com
