@@ -1,6 +1,6 @@
 # ev-user-management
 
-EisenVault (www.eisenvault.com) has released his add-on that allows you to reset passwords for users who forgot owns password without contacting Administrator.
+EisenVault (www.eisenvault.com) has released his add-on that allows users to reset passwords without contacting Administrator.
 
   Features :-
 	
