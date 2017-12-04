@@ -62,10 +62,13 @@ EisenVault (www.eisenvault.com) has released this add-on that allows users to re
 
     6. Start Alfresco.
 
-Note : After login as an admin, Upload/copy both templates from ev-user-management/templates/ to Repository->Data Dictionary->Email Templates
+Note : After login as an admin, Upload/copy both templates from ev-user-management/templates/ into Repository->Data Dictionary->Email Templates
+
 
 
 
 Built upon code from : https://github.com/FlexSolution/AlfrescoResetPassword
+
 Authors: Monica Kumari & Hiten Rastogi (www.eisenvault.com)
+
 Contact us: engineering@eisenvault.com
