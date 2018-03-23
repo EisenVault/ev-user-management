@@ -58,11 +58,11 @@ EisenVault (www.eisenvault.com) has released this add-on that allows users to re
     5. Apply AMPs by executing command from command line :
 
 	$ cd ${Alfresco_HOME}/bin
-	$ apply_amps.sh -force
+	$ apply_amps.sh -force -verbose
 
     6. Start Alfresco.
 
-Note : After login as an admin, Upload/copy both templates from ev-user-management/templates/ into Repository->Data Dictionary->Email Templates
+* Note : After login as an admin, Upload both the templates from ev-user-management/templates/ into Repository/My Files -> Data Dictionary -> Email Templates
 
 
 
